@@ -1,8 +1,5 @@
 let currentImageIndex = 0;
 
-const minimumImageIndex = 0;
-const maximumImageIndex = 4;
-
 const imageContainerId = "hotel-image-container";
 const imageContainer = document.getElementById(imageContainerId);
 
@@ -12,7 +9,14 @@ const imageNextButton = document.getElementById(imageNextButtonId);
 const imagePrevButtonId = "hotel-image-prev";
 const imagePrevButton = document.getElementById(imagePrevButtonId);
 
+const minimumImageIndex = 0;
+const maximumImageIndex = imageContainer.childElementCount - 1 ?? null;
+
 const handleNextImage = () => {
+  if (!maximumImageIndex) {
+    return;
+  }
+
   if ((currentImageIndex + 1) > maximumImageIndex) {
     currentImageIndex = minimumImageIndex;
 
@@ -23,6 +27,10 @@ const handleNextImage = () => {
 };
 
 const handlePrevImage = () => {
+  if (!maximumImageIndex) {
+    return;
+  }
+
   if ((currentImageIndex - 1) < minimumImageIndex) {
     currentImageIndex = maximumImageIndex;
 
