@@ -33,11 +33,11 @@ const handleNextImage = () => {
   const nextImageIndex = currentImageIndex + 1;
 
   if (nextImageIndex > maximumImageIndex) {
-    currentImageIndex = minimumImageIndex;
+    updateImage(minimumImageIndex);
     return;
   }
 
-  ++currentImageIndex;
+  updateImage(nextImageIndex);
 };
 
 const handlePrevImage = () => {
@@ -48,11 +48,11 @@ const handlePrevImage = () => {
   const nextImageIndex = currentImageIndex - 1;
 
   if (nextImageIndex < minimumImageIndex) {
-    currentImageIndex = maximumImageIndex;
+    updateImage(maximumImageIndex);
     return;
   }
 
-  --currentImageIndex;
+  updateImage(nextImageIndex);
 };
 
 const main = () => {
