@@ -17,9 +17,10 @@ const handleNextImage = () => {
     return;
   }
 
-  if ((currentImageIndex + 1) > maximumImageIndex) {
-    currentImageIndex = minimumImageIndex;
+  const nextImageIndex = currentImageIndex + 1;
 
+  if (nextImageIndex > maximumImageIndex) {
+    currentImageIndex = minimumImageIndex;
     return;
   }
 
@@ -31,9 +32,10 @@ const handlePrevImage = () => {
     return;
   }
 
-  if ((currentImageIndex - 1) < minimumImageIndex) {
-    currentImageIndex = maximumImageIndex;
+  const nextImageIndex = currentImageIndex - 1;
 
+  if (nextImageIndex < minimumImageIndex) {
+    currentImageIndex = maximumImageIndex;
     return;
   }
 
