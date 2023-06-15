@@ -19,15 +19,18 @@
 
     <div class="p-2"></div>
 
-    <div
-      class="flex items-center justify-center max-w-screen-sm mx-auto"
-      id="hotel-image-container"
-    >
-      <img class="max-h-80" src="asset/image/main-view.jpg">
-      <img class="max-h-80 hidden" src="asset/image/bathroom.jpg">
-    </div>
+    <div class="flex gap-4 max-w-screen-sm mx-auto">
+      <button id="hotel-image-prev">Prev</button>
 
-    <button id="hotel-image-next">Next</button>
-    <button id="hotel-image-prev">Prev</button>
+      <div
+        class="flex items-center justify-center max-w-screen-sm mx-auto"
+        id="hotel-image-container"
+      >
+        <img class="h-80 object-contain" src="asset/image/main-view.jpg">
+        <img class="h-80 object-contain hidden" src="asset/image/bathroom.jpg">
+      </div>
+
+      <button id="hotel-image-next">Next</button>
+    </div>
   </body>
 </html>
