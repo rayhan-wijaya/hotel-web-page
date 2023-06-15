@@ -26,10 +26,6 @@ const updateImage = (newImageIndex) => {
 };
 
 const handleNextImage = () => {
-  if (!maximumImageIndex) {
-    return;
-  }
-
   const nextImageIndex = currentImageIndex + 1;
 
   if (nextImageIndex > maximumImageIndex) {
@@ -56,7 +52,12 @@ const handlePrevImage = () => {
 };
 
 const main = () => {
-  if (!imageContainer || !imageNextButton || !imagePrevButton) {
+  if (
+    !imageContainer
+    || !imageNextButton
+    || !imagePrevButton
+    || !maximumImageIndex
+  ) {
     return;
   }
 
