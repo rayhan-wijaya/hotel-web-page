@@ -23,7 +23,7 @@ const updateImage = (newImageIndex) => {
   currentImage.classList.add("hidden");
 
   currentImageIndex = newImageIndex;
-}
+};
 
 const handleNextImage = () => {
   if (!maximumImageIndex) {
