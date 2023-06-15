@@ -4,10 +4,62 @@
   <head>
     <title>Dijual Apartment Murah</title>
     <link href="./dist/output.css" rel="stylesheet">
+
+    <script defer src="asset/script/hotel-image-slider.js"></script>
   </head>
 
   <body>
-    <h1>Dijual Apartment Murah</h1>
-    <p>Bintaro, Pondok Aren</p>
+    <div class="p-3" id="hero-section">
+      <h1 class="text-lg text-center">Dijual Apartment Murah</h1>
+
+      <div class="p-1"></div>
+
+      <p class="text-md text-center">Bintaro, Pondok Aren</p>
+    </div>
+
+    <div class="p-2"></div>
+
+    <div class="flex gap-4 max-w-screen-sm mx-auto items-center justify-center">
+      <button id="hotel-image-prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+
+      <div
+        class="flex items-center justify-center max-w-screen-sm mx-auto"
+        id="hotel-image-container"
+      >
+        <img class="h-80 object-contain" src="asset/image/main-view.jpg">
+        <img class="h-80 object-contain hidden" src="asset/image/bathroom.jpg">
+      </div>
+
+      <button id="hotel-image-next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
   </body>
 </html>
