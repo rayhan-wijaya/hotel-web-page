@@ -2,7 +2,12 @@
 module.exports = {
   content: ["*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "whatsapp-500": "#32d951",
+        "whatsapp-600": "#1c9732",
+      },
+    },
   },
   plugins: [
     require("tailwindcss"),
